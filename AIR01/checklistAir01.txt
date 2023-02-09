@@ -1,0 +1,78 @@
+spawn ssh sergiovalentea@172.20.222.162
+sergiovalentea@172.20.222.162's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-58-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Feb  8 07:35:02 AM UTC 2023
+
+  System load:  0.0                Processes:               125
+  Usage of /:   33.7% of 11.21GB   Users logged in:         1
+  Memory usage: 5%                 IPv4 address for enp0s3: 172.20.222.162
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+5 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Wed Feb  8 07:27:02 2023 from 172.20.222.161
+sergiovalentea@linuxservera:~$ uptime
+ 07:35:12 up  7:45,  4 users,  load average: 0.00, 0.00, 0.00
+sergiovalentea@linuxservera:~$ df -ah
+Filesystem                         Size  Used Avail Use% Mounted on
+sysfs                                 0     0     0    - /sys
+proc                                  0     0     0    - /proc
+udev                               2.5G     0  2.5G   0% /dev
+devpts                                0     0     0    - /dev/pts
+tmpfs                              504M  1.2M  503M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   12G  3.8G  6.9G  36% /
+securityfs                            0     0     0    - /sys/kernel/security
+tmpfs                              2.5G     0  2.5G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+cgroup2                               0     0     0    - /sys/fs/cgroup
+pstore                                0     0     0    - /sys/fs/pstore
+bpf                                   0     0     0    - /sys/fs/bpf
+systemd-1                             -     -     -    - /proc/sys/fs/binfmt_misc
+hugetlbfs                             0     0     0    - /dev/hugepages
+mqueue                                0     0     0    - /dev/mqueue
+debugfs                               0     0     0    - /sys/kernel/debug
+tracefs                               0     0     0    - /sys/kernel/tracing
+fusectl                               0     0     0    - /sys/fs/fuse/connections
+configfs                              0     0     0    - /sys/kernel/config
+none                                  0     0     0    - /run/credentials/systemd-sysusers.service
+/dev/loop1                          64M   64M     0 100% /snap/core20/1778
+/dev/loop2                          80M   80M     0 100% /snap/lxd/22923
+/dev/loop4                          50M   50M     0 100% /snap/snapd/17950
+/dev/loop0                          62M   62M     0 100% /snap/core20/1587
+/dev/loop3                         112M  112M     0 100% /snap/lxd/24322
+/dev/sda2                          2.0G  245M  1.6G  14% /boot
+binfmt_misc                           0     0     0    - /proc/sys/fs/binfmt_misc
+tmpfs                              504M  1.2M  503M   1% /run/snapd/ns
+nsfs                                  0     0     0    - /run/snapd/ns/lxd.mnt
+tmpfs                              504M  4.0K  504M   1% /run/user/1000
+sergiovalentea@linuxservera:~$ mpstat 30 vmstat 30
+Usage: mpstat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -A ] [ -n ] [ -T ] [ -u ] [ -V ]
+[ -I { SUM | CPU | SCPU | ALL } ] [ -N { <node_list> | ALL } ]
+[ --dec={ 0 | 1 | 2 } ] [ -o JSON ] [ -P { <cpu_list> | ALL } ]
+sergiovalentea@linuxservera:~$ swapon -s
+sergiovalentea@linuxservera:~$ netstat -i
+Kernel Interface table
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+enp0s3    1500    83675      0      0 0          4139      0      0      0 BMRU
+lo       65536      145      0      0 0           145      0      0      0 LRU
+sergiovalentea@linuxservera:~$ date
+Wed Feb  8 07:36:02 AM UTC 2023
+sergiovalentea@linuxservera:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           4.9Gi       225Mi       4.1Gi       1.0Mi       562Mi       4.5Gi
+Swap:             0B          0B          0B
+sergiovalentea@linuxservera:~$ 
