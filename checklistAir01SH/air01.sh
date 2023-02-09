@@ -18,8 +18,8 @@ filecopyhttp=/var/www/html/checklistAir01/AIR01/
 makefilehttp=/var/www/html/checklistAir01/AIR01
 
 #Kirim ke telegram
-chatid=-1001848244463
-linkapitelegram=https://api.telegram.org/bot6171909951:AAFeKrZHVaeuTL20yAnJnC6LCqF50xduF58/sendMessage?parse_mode=HTML
+chatid=-CHATIDNUMBER
+linkapitelegram=https://api.telegram.org/botAPIHTTPBOTTELEGRAM/sendMessage?parse_mode=HTML
 
 getdata(){
 expect $serverAir01  > $filesource
